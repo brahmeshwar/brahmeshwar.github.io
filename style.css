@@ -1,0 +1,167 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.header-div {
+	margin-top: 1%;
+	display: flex;
+	width: 100%;
+	margin-bottom: 20px;
+	flex-direction: row;
+}
+.info-div {
+	width: 70%;
+	margin-top: 10px;
+	bottom: 0px;
+}
+.info-div .name-info {
+	font-size: 28px;
+	position: relative;
+}
+.skill-item, .language-item, .personal-info-item {
+	display: : 'list-item';
+	margin-bottom: 0;
+	background: none;
+	color: #000;
+	padding: 0;
+}
+.skills-list, .personal-info-list, .languages-list {
+	margin-bottom: 30px;
+}
+.info-div .designation-info {
+	margin-top: 5px;
+	font-size: 16px;
+	color: #0B366B;
+}
+.location-info {
+	margin-top: 10px;
+}
+.contact-info {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+}
+.contact-info .email-info {
+	margin: 10px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.contact-info .email-info a {
+	text-decoration: none;
+	color: #000;
+}
+.image-div {
+	width: 30%;
+}
+.image-div img {
+	width: 90px;
+	height: 110px;
+	margin-top:  3px;
+	margin-left: 40%;
+}
+
+.social-info .linkedin-info, .online-info{
+	color: #0B366B;
+	margin-top: 5px;
+}
+hr {
+	margin-bottom: 20px;
+}
+.social-info .linkedin-info a, .online-info a {
+	text-decoration: none;
+	color: #000;
+}
+.header-seperator {
+	height: 10px;
+	fill: #0B366B;
+}
+.objective-div {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.inline-list{
+	display: inline;
+	color: #fff;
+	background: #0B366B;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	margin-right: 8px;
+	margin-bottom: 10px;
+}
+.div-title {
+	color: #0B366B;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.experience-list {
+	list-style: none;
+}
+.experience-item {
+	margin-bottom: 20px;
+}
+.position-info {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.education-list {
+	list-style: none;
+}
+.company-info {
+	margin-top:5px;
+	font-size: 14px;
+}
+.type-info {
+	font-size: 14px;
+}
+.time-info {
+	margin-top: 5px;
+	font-size: 14px;
+}
+.loc-info {
+	margin-top: 5px;
+	font-size: 14px;
+}
+.experience-proof {
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+	margin-left: 30px;
+}
+.course-info {
+	margin-top: 5px;
+	font-size: 14px;	
+}
+.school-info {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.grade-info {
+	margin-left: 5px;
+}
+.languages-list {
+	list-style: none;
+}
+
+
+.social-info {
+	display: flex;
+    flex-direction: column;
+}
+.
+
+.print-list {
+	display: 'list-item';
+	margin-bottom: 0;
+	background: none;
+	color: #000;
+	padding: 0;
+}
