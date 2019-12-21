@@ -136,9 +136,6 @@
 	</body>
 </html>
 <script type="text/javascript">
-	
-	//get user info .....
-	let ipData = Object.assign({});
 
 	//check owner or not ....
 	let isOwner = false;
@@ -152,15 +149,15 @@
 		});
 
 	//diable to rightclick....
-	document.addEventListener('contextmenu', event => {
-  		event.preventDefault();
-	 })
+	// document.addEventListener('contextmenu', event => {
+  	// 	event.preventDefault();
+	//  })
 
 	//disable hot keys
-	 document.body.addEventListener('keydown', event => {
-   		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
-     		event.preventDefault();
-	 })
+	//  document.body.addEventListener('keydown', event => {
+   	// 	if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
+    //  		event.preventDefault();
+	//  })
 	
 	//f12 and other inspect ways 
 	document.body.addEventListener('keydown', event => {
