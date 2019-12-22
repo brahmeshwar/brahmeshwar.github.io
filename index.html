@@ -211,15 +211,15 @@
 		});
 
 	//diable to rightclick....
-	// document.addEventListener('contextmenu', event => {
- //  		event.preventDefault();
-	//  })
+	document.addEventListener('contextmenu', event => {
+  		event.preventDefault();
+	 })
 
 	//disable hot keys
-	 // document.body.addEventListener('keydown', event => {
-  //  		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
-  //    		event.preventDefault();
-	 // })
+	 document.body.addEventListener('keydown', event => {
+   		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
+     		event.preventDefault();
+	 })
 	
 	//f12 and other inspect ways 
 	document.body.addEventListener('keydown', event => {
@@ -238,7 +238,7 @@
 			$('footer').css({
 				'display': 'block',
 				'font-size': '10px',
-				'margin-top': '85%'
+				'margin-top': '90%'
 			});
 
 		const experienceProofs = document.getElementsByClassName('experience-proof');
@@ -271,7 +271,7 @@
 
 		$('.education-info').css({'padding': '60px 0px 0px 0px'});
 
-		$('.languages-info').css({'padding': '114px 0px 0px 0px'});
+		$('.languages-info').css({'padding': '120px 0px 0px 0px'});
 		
 
 		window.print();
