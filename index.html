@@ -167,23 +167,23 @@
 		});
 
 	//diable to rightclick....
-	document.addEventListener('contextmenu', event => {
-  		event.preventDefault();
-	 })
+	// document.addEventListener('contextmenu', event => {
+  	// 	event.preventDefault();
+	//  })
 
 	//disable hot keys
-	 document.body.addEventListener('keydown', event => {
-   		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
-     		event.preventDefault();
-	 })
+	//  document.body.addEventListener('keydown', event => {
+   	// 	if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
+    //  		event.preventDefault();
+	//  })
 	
 	//f12 and other inspect ways 
-	document.body.addEventListener('keydown', event => {
-	     if (event.keyCode == 123)  // Prevent F12
-	         event.preventDefault();
-	     else if (event.ctrlKey && event.shiftKey && event.keyCode == 73)  // Prevent Ctrl+Shift+I        
-	         event.preventDefault();
-	});
+	// document.body.addEventListener('keydown', event => {
+	//      if (event.keyCode == 123)  // Prevent F12
+	//          event.preventDefault();
+	//      else if (event.ctrlKey && event.shiftKey && event.keyCode == 73)  // Prevent Ctrl+Shift+I        
+	//          event.preventDefault();
+	// });
 
 	//printbtn logic
 	const printBtn = document.getElementsByClassName('print-button')[0];
