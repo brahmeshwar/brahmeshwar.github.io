@@ -21,7 +21,7 @@
 					<div class="email-info"> <a target="blank" href="mailto:brahmeshwar8946@gmail.com">brahmeshwar8946@gmail.com</a> , </div>
 					<div class="mobile-info"> (+91) 9493229900 </div>
 				</div>
-				<div class="social-info">
+				<div class="social-info"> 
 					<div class="linkedin-info">
 						<label> LinkedIn : </label> <a target="blank" href="https://www.linkedin.com/in/bsn8946/" >https://www.linkedin.com/in/bsn8946/ </a>
 					</div>
@@ -66,7 +66,6 @@
 					</ul>
 			</div>
 		</div>
-		<hr></hr>
 		<div class="work-experience-div">
 			<div class="work-experience-title div-title"> Experience </div>
 			<hr></hr>
@@ -131,8 +130,23 @@
 				<li class="personal-info-item inline-list">  Listening to Music </li>
 			</ul>
 		</div>
+		<div class="achievements-info">
+			<div class="achievements-title div-title"> Achievements </div>
+			<hr> </hr>
+			<ul class="achievements-list">
+				<li class="achievement-item"> Awarded with "Rockstar Rookie" by "ConvertCart Pvt. Ltd." for my potential in learning and delivering quickly with in a short time after joining the organization. </li>
+			</ul>
+		</div>
+		<hr></hr>
+		<div class="declaration-info">
+			I here by declare that above mentioned information is true according to best of my knowledge.
+		</div>
 		<button class="print-button"> Print </button>
-
+		<footer>
+			<label class="ip-info"> </label>
+			<label class="ip-loc"> </label>
+			<label class="ip-isp"> </label>
+		</footer>
 	</body>
 </html>
 <script type="text/javascript">
@@ -142,22 +156,26 @@
 	const promptAns = prompt("Please answer the question to see the profile. \n  6 + 4");
 	if (8946 === parseInt(promptAns)) 
 		isOwner = true;
+	
 
 	if (!isOwner) 
 		$.getJSON("http://ipinfo.io", data => {
-			console.clear();
+			$('.ip-info').text(`This copy is viewed from brahmeshwar.github.io using IP Address : ${data.ip} | `);
+			$('.ip-loc').text(`Location Details : ${data.city}, ${data.region}, ${data.country} ${data.postal} | `);
+			$('.ip-isp').text(`${data.org}`);
+			$('footer').hide();
 		});
 
 	//diable to rightclick....
-	// document.addEventListener('contextmenu', event => {
-  	// 	event.preventDefault();
-	//  })
+	document.addEventListener('contextmenu', event => {
+  		event.preventDefault();
+	 })
 
 	//disable hot keys
-	//  document.body.addEventListener('keydown', event => {
-   	// 	if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
-    //  		event.preventDefault();
-	//  })
+	 document.body.addEventListener('keydown', event => {
+   		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
+     		event.preventDefault();
+	 })
 	
 	//f12 and other inspect ways 
 	document.body.addEventListener('keydown', event => {
@@ -171,6 +189,13 @@
 	const printBtn = document.getElementsByClassName('print-button')[0];
 	printBtn.addEventListener('click', event => {
 		printBtn.style.display = 'none';
+
+		if(!isOwner) 
+			$('footer').css({
+				'display': 'block',
+				'font-size': '10px',
+				'margin-top': '65%'
+			});
 
 		const experienceProofs = document.getElementsByClassName('experience-proof');
 		for(const proof of experienceProofs) 
@@ -226,6 +251,6 @@
 		for(const proof of experienceProofs) 
 			proof.style.display = '';
 
-
+		$('footer').css({'display': 'none'});
 	});
 </script>
