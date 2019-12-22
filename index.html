@@ -159,7 +159,7 @@
 	
 
 	if (!isOwner) 
-		$.getJSON("http://ipinfo.io", data => {
+		$.getJSON("https://ipinfo.io", data => {
 			$('.ip-info').text(`This copy is viewed from brahmeshwar.github.io using IP Address : ${data.ip} | `);
 			$('.ip-loc').text(`Location Details : ${data.city}, ${data.region}, ${data.country} ${data.postal} | `);
 			$('.ip-isp').text(`${data.org}`);
