@@ -182,3 +182,13 @@ hr {
 	text-align: center;
 	margin-bottom: 30px;
 }
+.certifications-list {
+	list-style: decimal;
+}
+.certificate-item {
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+.certified-by, .issued-date, .credential-id {
+	font-size:14px;
+}

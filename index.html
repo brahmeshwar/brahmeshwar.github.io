@@ -7,7 +7,7 @@
 		<style media="print">
 			 @page {
 			  	size: auto;
-			  	margin: 0;
+			  	margin: 10px;
 			  }
 		</style>
 	</head>
@@ -111,6 +111,50 @@
 				</li>
 			</ul>
 		</div>
+		<hr></hr>
+		<div class="certifications-info" style="padding-top: 20px;">
+			<div class="certifications-title div-title"> Certifications </div>
+			<hr></hr>
+			<ul class="certifications-list">
+				<li class="certificate-item"> 
+					<label class="certificate-name">Programming in Python Specialization</label>
+					<div class="certified-by">University of Michigan</div>
+					<div class="issued-date">Issued Nov 2019 - No Expiration Date</div>
+					<div class="credential-id"></div>
+				</li>
+				<li class="certificate-item">
+					<label class="certificate-name">Databases and SQL for Data Sciences</label>
+					<div class="certified-by">IBM</div>
+					<div class="issued-date">Issued Aug 2019 - No Expiration Date</div>
+					<div class="credential-id">Credential ID : 8DEMECE4WZR8 </div>
+				</li>
+				<li class="certificate-item"> 
+					<label class="certificate-name">Introduction to R Software </label>
+					<div class="certified-by">NPTEL - IIT KANPUR</div>
+					<div class="issued-date">Issued Aug 2018 - No Expiration Date</div>
+					<div class="credential-id">Credential ID : NPTEL18CS52S21181497 </div>
+				</li>
+				<li class="certificate-item"> 
+					<label class="certificate-name"> Programming, Data structures, Algorithms in Python </label>
+					<div class="certified-by">NPTEL - IIT MADRAS</div>
+					<div class="issued-date">Issued Feb 2018 - No Expiration Date</div>
+					<div class="credential-id">Credential ID : NPTEL18CS21S4270084 </div>
+				</li>
+				<li class="certificate-item">
+					<label class="certificate-name"> Cloud Computing </label>
+					<div class="certified-by">NPTEL - IIT KHARAGPUR</div>
+					<div class="issued-date">Issued Oct 2017 - No Expiration Date</div>
+					<div class="credential-id">Credential ID : NPTEL17CS23S2590024 </div>
+				</li>
+				<li class="certificate-item" style="margin-bottom: 20px"> 
+					<label class="certificate-name"> Introduction to HTML, CSS, Javascript </label>
+					<div class="certified-by">edx- Microsoft</div>
+					<div class="issued-date">Issued Jan 2017 - No Expiration Date</div>
+					<div class="credential-id">Credential ID : 9552ab34aff9492184aba79123acaa81 </div>
+				</li>
+			</ul>
+		</div>
+		<hr>
 		<div class="languages-info">
 			<div class="languages-title div-title"> Languages </div>
 			<hr> </hr>
@@ -153,7 +197,7 @@
 
 	//check owner or not ....
 	let isOwner = false;
-	const promptAns = prompt("Please answer the question to see the profile. \n  6 + 4");
+	const promptAns = prompt(`Please answer the question to see the profile. \n  ${parseInt((Math.random(10,10)*12).toString())} + ${parseInt((Math.random(10,10)*17).toString())}`);
 	if (8946 === parseInt(promptAns)) 
 		isOwner = true;
 	
@@ -168,22 +212,22 @@
 
 	//diable to rightclick....
 	// document.addEventListener('contextmenu', event => {
-  	// 	event.preventDefault();
+ //  		event.preventDefault();
 	//  })
 
 	//disable hot keys
-	//  document.body.addEventListener('keydown', event => {
-   	// 	if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
-    //  		event.preventDefault();
-	//  })
+	 // document.body.addEventListener('keydown', event => {
+  //  		if (event.ctrlKey && 'cvxspwuaz'.indexOf(event.key) !== -1) 
+  //    		event.preventDefault();
+	 // })
 	
 	//f12 and other inspect ways 
-	// document.body.addEventListener('keydown', event => {
-	//      if (event.keyCode == 123)  // Prevent F12
-	//          event.preventDefault();
-	//      else if (event.ctrlKey && event.shiftKey && event.keyCode == 73)  // Prevent Ctrl+Shift+I        
-	//          event.preventDefault();
-	// });
+	document.body.addEventListener('keydown', event => {
+	     if (event.keyCode == 123)  // Prevent F12
+	         event.preventDefault();
+	     else if (event.ctrlKey && event.shiftKey && event.keyCode == 73)  // Prevent Ctrl+Shift+I        
+	         event.preventDefault();
+	});
 
 	//printbtn logic
 	const printBtn = document.getElementsByClassName('print-button')[0];
@@ -194,7 +238,7 @@
 			$('footer').css({
 				'display': 'block',
 				'font-size': '10px',
-				'margin-top': '65%'
+				'margin-top': '85%'
 			});
 
 		const experienceProofs = document.getElementsByClassName('experience-proof');
@@ -225,11 +269,15 @@
 			$(personalInfoElement).addClass('print-list');
 		}
 
-		$('.education-info').css({'padding': '50px 0px 0px 0px'});
+		$('.education-info').css({'padding': '60px 0px 0px 0px'});
+
+		$('.languages-info').css({'padding': '114px 0px 0px 0px'});
+		
 
 		window.print();
 
 		$('.education-info').css({'padding': '0px 0px 0px 0px'});
+		$('.languages-info').css({'padding': '0px 0px 0px 0px'});
 
 		printBtn.style.display = 'block';
 		for(const skillElement of skillElements) {
